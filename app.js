@@ -1,5 +1,10 @@
 function uniTotal (string) {
-    // total up dem unicodes!
+    str = string.split(""); //split into arr
+    let newArr = [];
+        for(let i = 0; i < str.length; i++){
+            newArr[i] = str[i].charCodeAt(0);
+        }
+    return newArr.reduce((partialSum, a) => partialSum + a, 0); //sum array
 }
 
 console.log(uniTotal("")); // 0
